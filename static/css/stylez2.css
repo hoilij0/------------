@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+img{
+    height: 300px;
+    width: 350px;
+}
+
+.centr-cont{
+    height: 650px;
+    width: 750px;
+    background-color: #ffffff;
+    margin-left: calc((100% - 750px)/2);
+}
+
+.block{
+    position: relative;
+    height: 300px;
+    width: 350px;
+    display: inline-block;
+}
+
+.second{
+    margin-left: 45px;
+}
+
+.third{
+    margin-top: 45px;
+}
+
+.fourth{
+    margin-left: 45px;
+    margin-top: 45px;
+}

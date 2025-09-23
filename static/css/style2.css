@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.centr-cont {
+    height: 650px;
+    width: 750px;
+    background-color: rgb(237, 235, 235);
+    margin-left: calc((100% - 750px) / 2);
+}
+
+.block {
+    position: relative;
+    height: 300px;
+    width: 350px;
+    display: inline-block;
+}
+
+.first {
+    background-color: #ea9a05;
+}
+
+.second {
+    background-color: #fd0202;
+    margin-left: 46px;
+}
+
+.third {
+    background-color: rgb(1, 201, 252);
+    margin-top: 46px;
+}
+
+.fourth {
+    margin-left: 46px;
+    margin-top: 46px;
+    background-color: rgba(6, 248, 46, 0.333);
+}
