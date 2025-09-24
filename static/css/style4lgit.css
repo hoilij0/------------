@@ -1,0 +1,66 @@
+#nav {
+    float: left;
+    width: 100%;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#nav li {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+#nav li a {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    background: #000000;
+    text-decoration: none;
+    transition: background 0.4s, transform 0.075s linear;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+    border-radius: 2px;
+}
+
+#nav li a:hover {
+    background: rgba(255,204,0,0.75);
+}
+
+/* ВЫПАДАЮЩИЕ ПУНКТЫ */ 
+#nav ul {
+    list-style: none;
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li {
+    padding-top: 1px;
+    float: none;
+    margin-right: 0;
+}
+
+#nav ul a {
+    white-space: nowrap;
+}
+
+/* СОСТОЯНИЯ HOVER */
+#nav li:hover ul {
+    left: 0;
+    opacity: 1;
+}
+
+#nav li:hover > a {
+    background: rgba(255,204,0,0.5);
+    text-decoration: underline;
+}
+
+#nav li:hover ul a:hover {
+    background: rgb(255, 251, 0);
+    transform: scale(1.05);
+}
