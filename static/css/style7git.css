@@ -1,51 +1,54 @@
-/* Общие стили для страницы */
-html, body {
+/* Базовые стили */
+* {
     margin: 0;
-    height: 100%;
-}
-
-body {
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Стили для всех элементов внутри сетки */
-.grid * {
-    padding: 10px 15px;
-    background-color: rgb(96, 143, 204);
-    border: 1px solid rgb(24, 84, 133);
-    text-align: center;
-    font-size: 22px;
-    font-family: sans-serif;
-    color: #fff;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* Стили для самой сетки */
-.grid {
-    height: 100%;
+/* Витрина карточек */
+.showcase {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 100px 1fr 100px;
-    grid-template-areas:
-        "header header"
-        "aside main"
-        "aside footer";
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Назначение областей для элементов */
-header {
-    grid-area: header;
+/* Стили карточек */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
 }
 
-aside {
-    grid-area: aside;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-main {
-    grid-area: main;
+.card-content {
+    padding: 1.5rem;
 }
 
-footer {
-    grid-area: footer;
+.card h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
