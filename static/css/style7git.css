@@ -1,0 +1,43 @@
+body {
+        margin: 0;
+        padding: 15%;
+        display: grid;
+        place-content: stretch;
+        box-sizing: border-box;
+        min-height: 100vh;
+      }
+
+      .grid {
+        background: rgba(135, 207, 235, 0.1);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .grid-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: ghostwhite;
+        border: 2px dotted skyblue;
+        font-size: 2.5rem;
+      }
+.grid-cell:nth-child(1) {
+    grid-column-start: span 3;
+}
+.grid-cell:nth-child(3) {
+    grid-column-start: span 2;
+}
+.grid-cell:nth-child(4) {
+    grid-column-start: 2; /* элемент начинается со 2-ой линии сетки */
+    grid-column-end: span 2; /* элемент занимает по ширине 2 колонки */
+}
+.grid-cell:first-child {
+    order: 1;
+}
+.grid-cell:last-child {
+    order: -1;
+}
+.grid-cell:nth-child(2) {
+    grid-row: span 4; /* равнозначно: auto / span 4 */
+}
